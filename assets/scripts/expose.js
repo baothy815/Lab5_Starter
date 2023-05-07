@@ -36,26 +36,32 @@ function init() {
       volumeImage.src = './assets/icons/volume-level-3.svg';
     }
   });
-  const jsConfetti = new JSConfetti()
+    // Add confetti using JSConfetti library
+    const jsConfetti = new JSConfetti()
 
-  jsConfetti.addConfetti()
+ /*  hornSelect.addEventListener("change", function() {
+      if (hornSelect.value === "party-horn") {
+      jsConfetti.addConfetti()
+      } 
+    });
+
+*/
   playButton.addEventListener('click', (event) => {
-    // Prevent the default form submission behavior
+
     event.preventDefault();
 
     // Play the selected sound at the selected volume
     audioElement.volume = volumeInput.value / 100;
+    if (hornSelect.value === "party-horn") {
+      jsConfetti.addConfetti()
+      } 
+       
     audioElement.play();
 
-    // Add confetti using JSConfetti library
-    
-    jsConfetti.addConfetti({
-      confettiColors: [
-        '#ff0a54', '#ff477e', '#ff7096', '#ff85a1', '#fbb1bd', '#f9bec7',
-      ],
-    }) 
    
   });
+
+
 
 
 }
