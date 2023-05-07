@@ -36,7 +36,9 @@ function init() {
       volumeImage.src = './assets/icons/volume-level-3.svg';
     }
   });
+  const jsConfetti = new JSConfetti()
 
+  jsConfetti.addConfetti()
   playButton.addEventListener('click', (event) => {
     // Prevent the default form submission behavior
     event.preventDefault();
@@ -47,16 +49,12 @@ function init() {
 
     // Add confetti using JSConfetti library
     
-    
-    confetti({
-      particleCount: 150,
-      startVelocity: 100,
-      spread: 360,
-      origin: {
-        x: playButton.offsetLeft + playButton.offsetWidth / 2,
-        y: playButton.offsetTop + playButton.offsetHeight / 2
-      }
-    });
+    jsConfetti.addConfetti({
+      confettiColors: [
+        '#ff0a54', '#ff477e', '#ff7096', '#ff85a1', '#fbb1bd', '#f9bec7',
+      ],
+    }) 
+   
   });
 
 
