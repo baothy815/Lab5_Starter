@@ -10,8 +10,8 @@ function init() {
   const audioElement = document.querySelector("audio");
 
   // Add event listeners to the elements
-    selectHorn.addEventListener("change", () => {
-    // Update the audio source when a new horn is selected
+    selectHorn.addEventListener("input", () => {
+    // Update the audio source when a new horn is selected using template literals 
     audioElement.src = `./assets/audio/${selectHorn.value}.mp3`;
 
     // Update the image when a horn is selected
