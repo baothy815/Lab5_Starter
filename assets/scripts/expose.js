@@ -51,7 +51,8 @@ function init() {
     event.preventDefault();
 
     // Play the selected sound at the selected volume
-    audioElement.volume = volumeInput.value / 100;
+    // divided by 100 to get a decimal value between 0 and 1
+    audioElement.volume = volumeInput.value / 100; 
     if (hornSelect.value === "party-horn") {
       jsConfetti.addConfetti()
       } 
