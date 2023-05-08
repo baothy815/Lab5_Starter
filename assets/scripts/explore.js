@@ -4,11 +4,11 @@ window.addEventListener('DOMContentLoaded', init);
 
 function init() {
    
-    const button = document.querySelector('button');
-    const select = document.querySelector('select');
-    const textArea = document.querySelector('textarea');
-    const img = document.querySelector('img');
-    const voiceSelction = document.querySelector('#voice-select');
+    const button = document.querySelector("button");
+    const select = document.querySelector("select");
+    const textArea = document.querySelector("textarea");
+    const img = document.querySelector("img");
+    const voiceSelction = document.querySelector("#voice-select");
     const synth = window.speechSynthesis;
 
 let voices = [];
